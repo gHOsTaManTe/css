@@ -1,0 +1,645 @@
+@import url('https://fonts.googleapis.com/css?family=Overlock&display=swap');
+*{
+    font-family: 'Overlock', cursive;
+}
+*, *::before, *::after{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+}
+.a{
+    position: absolute;
+}
+.r{
+    position: relative;
+}
+.c{
+    cursor: pointer;
+}
+.b{
+    font-weight: bold;
+}
+.fs{
+    font-size: 15px;
+}
+.g{
+    color: #656565
+}
+.cg{
+    color: #32d632;
+
+}
+hr{
+    border: .5px solid #f0f0f0;
+}
+.cdk-drag-preview {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+                0 8px 10px 1px rgba(0, 0, 0, 0.14),
+                0 3px 14px 2px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+                0 8px 10px 1px rgba(0, 0, 0, 0.14),
+                0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+.cdk-drag-placeholder {
+    opacity: 0;
+}
+.cdk-drag-animating {
+    -webkit-transition: -webkit-transform 250ms cubic-bezier(0, 0, 0.2, 1);
+    transition: -webkit-transform 250ms cubic-bezier(0, 0, 0.2, 1);
+    -o-transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.main{
+    padding: 0px;
+    background: #f4f4ef;
+    position: relative;
+    z-index: 0;
+    border: 1px solid #2f2e60;
+}
+.bg_img{
+    height: 1000px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    
+}
+.logo2{
+    max-width: 160px;
+    max-height: 160px;
+}
+.logo2 img{
+    max-height: 230px;
+    max-width: 350px;
+}
+.bgimg{
+    width: 270px;
+    height: 160px;
+    background-size: contain;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.navTop{
+    background: rgba(255, 255, 255, 0.6392156862745098);
+    min-width: 900px;
+}
+.content{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 800px;
+    margin: auto;
+}
+.links{
+    margin-left: auto;
+}
+ul.linkUl{
+    list-style: none;
+    padding: 0px;
+    text-align: center;
+    
+}
+ul.linkUl li{
+    float: left;
+    margin: 10px;
+}
+.linkUl li i{
+    color: var(--bg-color, #FF5722);
+    font-size: 17px;
+}
+.linkUl li a{
+    color: #4a4a4a  !important;
+    font-style: italic !important;
+    text-shadow: 0px 0px 2px #FFF;
+    font-weight: 800;
+}
+.linkUl li a:hover{
+    color: #d01500 !important;
+    font-style: italic !important;
+    text-decoration: underline !important;
+}
+.body{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-top: 80px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+.right_side{
+    background: white;
+    min-height: 1124px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    min-width: 700px;
+    max-width: 1000px;
+    width: 700px;
+    padding: 15px;
+    margin: 0px 0px 0px 10px;
+}
+p._title {
+    background: rgba(255, 255, 255, 0) url(https://pagesshop.com/assets/img/item2/bg2.png) repeat scroll top left;
+    border-bottom: 1px solid #988dd2;
+    margin: 0px;
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--fo-color, #d01500);
+    background-color: var(--bg-color, #d01500);
+    text-shadow: 1px 1px 2px #484848;
+}
+.leftDiv{
+    background: #FFF;
+}
+.left_side{
+    min-height: 200px;
+    min-width: 250px;
+    max-width: 250px;
+    width: 250px;
+}
+ul.category{
+    list-style: none;
+    padding: 0px 15px;
+    margin-bottom: 10px;
+}
+.category li{
+    cursor: pointer;
+    padding: 11px 0px;
+    font-size: 16px;
+    border-bottom: 1px solid #e4e4e4;
+    font-style: italic;
+}
+.category li a{
+    text-decoration: none !important;
+    color: #656565 !important;
+}
+.images{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+}
+.category li a:hover{
+    color: #d01500 !important;
+    -webkit-transition: .6s;
+    -o-transition: .6s;
+    transition: .6s;
+    text-decoration: underline !important;
+}
+/* ********************************************** */
+#images2{
+    height: 535px;
+}
+
+._body{
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width:86px;
+
+    width: min-content;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width:86px;
+}
+label{
+    margin: 0px;
+}
+.clk_img{
+    width: 80px;
+    border: 1px solid #eaeaea;
+    margin: 0px 2px;
+}
+.act_img{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    max-width: 490px;
+    width: auto;
+    max-height: 520px;
+    height: auto;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+}
+.ir{
+    display: none;
+}
+.p_{
+    display: inline-block;
+}
+ul.am{
+    list-style: none;
+    padding: 0px;
+    margin: 0px 20px;
+}
+ul.am li{
+    margin: 8px;
+}
+ul.am li::before{
+    content: '\f046';
+    font-family: FontAwesome; 
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 12px;
+    color: #32d632;
+    position: absolute;
+    left: -20px;
+}
+ul.am.cm li::before{
+    content: '✔';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 12px;
+    color: #32d632;
+    position: absolute;
+    left: -20px;
+}
+ul.am.x li::before{
+    content: '\f067';
+    font-family: FontAwesome; 
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 12px;
+    color: orange;
+    position: absolute;
+    left: -20px;
+}
+tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+h4.lin{
+    border-bottom: 1px solid #d8d8d8;
+    padding: 12px 0px;
+}
+h4.lin.tb{
+    border-bottom: 0px;
+    padding: 0px;
+    margin: 6px 0px;
+}
+#c_0, #c_1, #c_2,
+#c_3, #c_4, #c_5,
+#c_6, #c_7, #c_8,
+#c_9, #c_10, #c_11
+{
+    opacity: .0;
+    -webkit-transition: .6s;
+    -o-transition: .6s;
+    transition: .6s
+}
+#p_0:checked ~ label > #c_0,
+#p_1:checked ~ label > #c_1,
+#p_2:checked ~ label > #c_2,
+#p_3:checked ~ label > #c_3,
+#p_4:checked ~ label > #c_4,
+#p_5:checked ~ label > #c_5,
+#p_6:checked ~ label > #c_6,
+#p_7:checked ~ label > #c_7,
+#p_8:checked ~ label > #c_8,
+#p_9:checked ~ label > #c_9,
+#p_10:checked ~ label > #c_10,
+#p_11:checked ~ label > #c_11
+{
+    opacity: 1;
+    -webkit-transition: .6s;
+    -o-transition: .6s;
+    transition: .6s
+}
+.lab_cat{
+    margin: 0px 1px;
+    background: rgba(255, 255, 255, 0) url(https://pagesshop.com/assets/img/item2/bg2.png) repeat scroll top left;
+    padding: 8px;
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--fo-color, #d01500);
+    background-color: var(--bg-color, #d01500);
+    text-shadow: 1px 1px 2px #484848;
+}
+._one, ._tow,._thre, .cat{
+    display: none;
+    text-align: left;
+}
+#one:checked ~ ._one,
+#tow:checked ~ ._tow,
+#thre:checked ~ ._thre
+{
+    display: block;
+}
+#one:checked ~ #lab_one,
+#tow:checked ~ #lab_tow,
+#thre:checked ~ #lab_thre
+{
+    background-color: #0d4f85;
+    color: #FFF;
+}
+#one:checked ~ #lab_one::before,
+#tow:checked ~ #lab_tow::before,
+#thre:checked ~ #lab_thre::before
+{
+    border-color: #0d4f85 transparent transparent;
+    border-style: solid;
+    border-width: 10px 10px 0;
+    bottom: -10px;
+    content: "";
+    height: 0;
+    left: 50%;
+    margin-left: -5px;
+    position: absolute;
+    width: 0;
+}
+.is{
+    display: block;
+    width: 660px;
+    height: auto;
+    margin: auto;
+    margin-bottom: 3px;
+}
+.imgSer{
+    width: 210px;
+    margin-bottom: 15px;
+}
+.serBod{
+    padding: 20px;
+}
+.footer{
+    height: 290px;
+    background: rgba(255, 255, 255, 0) url(https://pagesshop.com/assets/img/item2/bg2.png) repeat scroll top left;
+    background-color: #0c518a;
+    min-width: 960px;
+}
+.child_footer{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-width: 700px;
+    width: 950px;
+    margin: auto;
+}
+.fo_left{
+    min-width: 300px;
+    width: 500px;
+    margin-right: 10px;
+}
+.fo_right{
+    min-width: 400px;
+    margin-left: auto;
+    width: 400px;
+}
+.ft{
+    border-bottom: 1px solid #bbbed4;
+    color: #bbbed4;
+    margin-top: 10px;
+    padding: 10px;
+}
+.fo_lins{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.fo_icons img{
+    margin: 5px;
+    background: #ffffff;
+    height: 31px;
+    width: auto;
+    border-radius: 4px;
+}
+.ul_fo{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+}
+
+.ul_fo li{
+    float: left;
+    margin: 10px;
+    
+    font-size: 17px;
+}
+.ul_fo li a{
+    color: #bbbed4;
+}
+ul.ul_fo li::before{
+    content: '>>';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    font-weight: 800;
+    margin-right: 12px;
+    color: #32d632;
+}
+.cr{
+    color: #bbbed4
+}
+.cr a{
+    color: #bbbed4
+}
+table.th{
+    width: 100%;
+}
+table#ti td{
+    padding: 4px;
+}
+table#ti, table#ti th, table#ti tr, table#ti td {
+    border: 1px solid #e2e2e2;
+}
+
+.prod_link{
+    text-decoration: none;
+    width: 230px;
+    background: #FFF;
+    color: #565656;
+    display: block;
+    padding: 10px;
+    height: 100%;
+    border: 1px solid #dfdfdf;
+}
+
+.prod_link:hover .prod_title{
+    text-decoration: underline
+}
+.prod_link small{
+    color: #767676;
+    font-size: 12px;
+}
+.prod_title{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+    padding: 0;
+    border: 0;
+    font-weight: normal;
+    font-size: 14px;
+}
+.ul_prod{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    list-style: none;
+    padding: 0px;
+    margin: 0px 15px;
+    padding-bottom: 10px;
+}
+.ul_prod li {
+    margin: 2px;
+}
+._img_ads{
+    height: 140px;
+    width: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 10px;
+}
+.ads_price{
+    font-size: 17px;
+    font-weight: 700;
+    margin: 8px 0 0 0;
+    margin: 0px 0px 3px 0px;
+}
+.ebDiv{
+    min-width: 780px;
+    max-width: 860px;
+    width: 100%;
+}
+
+.prod_link small, .prod_title, .ads_price {
+    font-family: "Helvetica neue",Helvetica,Verdana,sans-serif !important;
+}
+.ebay_items{
+    width: 970px;
+    margin: auto;
+    background: #FFF;
+    margin-top: 10px;
+}
+.main_item{
+    height: 265px;
+}
+.more_prod{
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+table tr {
+    font-size: 16px;
+}
+
+._Bewertungen{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px;
+    font-size: 21px;
+}
+._Bewertungen .x{
+    color: #ffad33;
+}
+._Bewertungen span{
+    margin-right: 30px;
+    font-size: 23px;
+}
+
+.ebay_role_main{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 8px;
+}
+.ebay_role_main .itm1{
+    width: 25px;
+}
+.ebay_role_main .itm2{
+    max-width: 378px;
+}
+.ebay_role_main .itm2 .smal{
+    font-size: 11px;
+    color: gray;
+    min-width: 378px;
+}
+.ebay_role_main .itm3{
+    min-width: 140px;
+    font-size: 12px;
+}
+.ebay_role_main .itm4{
+    font-size: 12px;
+    min-width: 100px;
+}
+.ebay_role_main .first{
+    padding: 0px 10px;
+    background: #f5f5f5;
+    min-height: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.ebay_role_main .next{
+    padding: 0px 10px;
+    min-height: 40px;
+    height: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+div.fo_right::after{
+    content: "© 2017-2020";
+    color: #99bbda;
+    position: relative;
+    bottom: -20px;
+    font-size: 13px;
+}
+.d-block.mb-3.text-.cr{
+    display: none !important;
+
+}
